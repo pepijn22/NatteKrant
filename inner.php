@@ -286,7 +286,7 @@
 					<!-- END: Subheader -->
 					<div class="m-content">
 						Inner page content goes here </div>
-				</div>
+					</div>
 
 				<!--</div>-->
 			</div>

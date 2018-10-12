@@ -39,7 +39,7 @@
 					</div>
           <?php
           $header = 'Dashboard';
-          if($_GET['page']){
+          if(isset($_GET['page'])){
             if($_GET['page'] == 'klanten'){
               include ("klanten.php");
               $header = 'Klanten';
