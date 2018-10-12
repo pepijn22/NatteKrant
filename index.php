@@ -37,19 +37,16 @@
 							</div>
 						</div>
 					</div>
-          <?php
-          $header = 'Dashboard';
-          if(isset($_GET['page'])){
-            if($_GET['page'] == 'klanten'){
-              include ("klanten.php");
-              $header = 'Klanten';
-            }
 
-            ?><?php
-          } else {
-          ?>
-
-
+					<?php
+						$header = 'Dashboard';
+						if(isset($_GET['page'])){
+							if($_GET['page'] == 'klanten'){
+							  include ("klanten.php");
+							  $header = 'Klanten';
+							}
+						} else {
+					?>
 
 					<!-- END: Subheader -->
 					<div class="m-content">
