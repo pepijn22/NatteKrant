@@ -2,6 +2,14 @@
 
   <?php include_once "include/header.php" ?>
 
+  <?php
+	if(isset($_GET['page'])){
+		$page = $_GET['page'];
+	} else {
+		$page = 'dashboard';
+	}
+?>
+
 
 	<!-- end::Head -->
 
@@ -24,22 +32,13 @@
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
-								<h3 class="m-subheader__title ">Dashboard</h3>
+								<h3 class="m-subheader__title "><?= ucfirst($page) ?></h3>
 							</div>
 						</div>
 					</div>
 
 					<?php
-						$header = 'Dashboard';
-						if(isset($_GET['page'])){
-							if($_GET['page'] == 'klanten'){
-							  include ("klanten.php");
-							  $header = 'Klanten';
-							}
-						} else {
-							include("dashboard.php");
-							$header = 'dashboard';
-          				}
+						include ($page.".php");
           			?>
       	</div>		
 	</div>
