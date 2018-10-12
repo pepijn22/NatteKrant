@@ -71,6 +71,7 @@
 
 		<!--end::Page Snippets -->
 		<script src="assets/demo/default/assets/demo/default/custom/crud/datatables/advanced/column-rendering.js" type="text/javascript"></script>
+		<!-- <script src="assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script> -->
 
 	</body>
 
