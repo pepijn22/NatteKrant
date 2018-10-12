@@ -5,8 +5,19 @@
   <?php
 	if(isset($_GET['page'])){
 		$page = $_GET['page'];
+    $pageTitle = $_GET['page'];
+    if(isset($_GET['klantid'])){
+      $klantid = $_GET['klantid'];
+      $sql = 'SELECT k.naam FROM klant k WHERE klant_id = '.$klantid.'';
+
+      foreach ($conn->query($sql) as $row) {
+        $pageTitle = $_GET['page'] . ' van ' . $row['naam'];
+      }
+
+    }
 	} else {
 		$page = 'dashboard';
+    $pageTitle = 'dashboard';
 	}
 ?>
 
@@ -32,7 +43,7 @@
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
-								<h3 class="m-subheader__title "><?= ucfirst($page) ?></h3>
+								<h3 class="m-subheader__title "><?= ucfirst($pageTitle) ?></h3>
 							</div>
 						</div>
 					</div>
