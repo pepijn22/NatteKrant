@@ -8,7 +8,7 @@
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="" class="m-brand__logo-wrapper">
-											<img alt="" src="assets/demo/demo2/media/img/logo/logo.png" />
+											<img alt="" src="assets/images/logo-timaflu.png" style="width: 80px; height: auto;" />
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -359,15 +359,6 @@
 														</div>
 													</div>
 												</div>
-											</li>
-											<li id="m_quick_sidebar_toggle" class="m-nav__item">
-												<a href="#" class="m-nav__link m-dropdown__toggle">
-													<span class="m-nav__link-icon m-nav__link-icon--aside-toggle">
-														<span class="m-nav__link-icon-wrapper">
-															<i class="flaticon-grid-menu"></i>
-														</span>
-													</span>
-												</a>
 											</li>
 										</ul>
 									</div>
