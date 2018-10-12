@@ -1,4 +1,6 @@
-	<?php include_once "include/header.php" ?>
+  <?php include('conn.php');?>
+
+  <?php include_once "include/header.php" ?>
 
 
 	<!-- end::Head -->
