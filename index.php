@@ -10,7 +10,7 @@
 
 			<!-- begin::Header -->
 
-			<?php include_once "include/menu.php" ?>	
+			<?php include_once "include/menu.php" ?>
 
 			<!-- end::Header -->
 
@@ -1966,7 +1966,7 @@
 									<div class="m-portlet__body">
 
 										<!--begin: Datatable -->
-										<div class="m_datatable" id="m_datatable_latest_orders"></div>
+										<div class="m_datatable" id="m_datatable_latest_orders">sss</div>
 
 										<!--end: Datatable -->
 									</div>
