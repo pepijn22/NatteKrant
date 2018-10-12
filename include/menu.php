@@ -392,6 +392,12 @@
 												<span class="m-menu__link-text">Klanten</span>
 											</a>
 										</li>
+										<li class="m-menu__item  m-menu__item" aria-haspopup="true">
+											<a href="?page=orders" class="m-menu__link">
+												<span class="m-menu__item-here"></span>
+												<span class="m-menu__link-text">Orders</span>
+											</a>
+										</li>
 
 										<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel m-menu__item--more m-menu__item--icon-only" m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
 											<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">

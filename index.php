@@ -36,12 +36,16 @@
 							  include ("klanten.php");
 							  $header = 'Klanten';
 							}
+              if($_GET['page'] == 'orders'){
+							  include ("klanten.php");
+							  $header = 'Klanten';
+							}
 						} else {
 							include("dashboard.php");
 							$header = 'dashboard';
           				}
           			?>
-      	</div>		
+      	</div>
 	</div>
 
 	<!-- end::Body -->
