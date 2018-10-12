@@ -38,6 +38,7 @@
 		<link href="assets/demo/demo2/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
 		<!--RTL version:<link href="assets/demo/demo2/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+		<link href="assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
 		<!--end::Base Styles -->
 		<link rel="shortcut icon" href="assets/demo/demo2/media/img/logo/favicon.ico" />

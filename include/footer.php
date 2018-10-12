@@ -70,6 +70,8 @@
 		<script src="assets/app/js/dashboard.js" type="text/javascript"></script>
 
 		<!--end::Page Snippets -->
+		<script src="assets/demo/default/assets/demo/default/custom/crud/datatables/advanced/column-rendering.js" type="text/javascript"></script>
+
 	</body>
 
 	<!-- end::Body -->
