@@ -18,24 +18,11 @@
 			<!-- begin::Body -->
 			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop 	m-container m-container--responsive m-container--xxl m-page__container m-body">
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
-
-          <?php
-          $header = 'Dashboard';
-          if($_GET['page']){
-            if($_GET['page'] == 'klanten'){
-              include ("klanten.php");
-              $header = 'Klanten';
-            }
-
-            ?><?php
-          } else {
-          ?>
-
-					<!-- BEGIN: Subheader -->
+          <!-- BEGIN: Subheader -->
 					<div class="m-subheader ">
 						<div class="d-flex align-items-center">
 							<div class="mr-auto">
-								<h3 class="m-subheader__title "><?=$header?></h3>
+								<h3 class="m-subheader__title ">Dashboard</h3>
 							</div>
 							<div>
 								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
@@ -50,6 +37,19 @@
 							</div>
 						</div>
 					</div>
+          <?php
+          $header = 'Dashboard';
+          if($_GET['page']){
+            if($_GET['page'] == 'klanten'){
+              include ("klanten.php");
+              $header = 'Klanten';
+            }
+
+            ?><?php
+          } else {
+          ?>
+
+
 
 					<!-- END: Subheader -->
 					<div class="m-content">
