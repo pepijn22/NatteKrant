@@ -7,7 +7,7 @@
 							<div class="m-stack__item m-brand">
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
-										<a href="index.html" class="m-brand__logo-wrapper">
+										<a href="" class="m-brand__logo-wrapper">
 											<img alt="" src="assets/demo/demo2/media/img/logo/logo.png" />
 										</a>
 									</div>
@@ -389,12 +389,19 @@
 								</button>
 								<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-dark m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light ">
 									<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-										<li class="m-menu__item  m-menu__item--active " aria-haspopup="true">
-											<a href="index.html" class="m-menu__link ">
+										<li class="m-menu__item  m-menu__item " aria-haspopup="true">
+											<a href="?" class="m-menu__link ">
 												<span class="m-menu__item-here"></span>
 												<span class="m-menu__link-text">Dashboard</span>
 											</a>
 										</li>
+										<li class="m-menu__item  m-menu__item" aria-haspopup="true">
+											<a href="?page=klanten" class="m-menu__link">
+												<span class="m-menu__item-here"></span>
+												<span class="m-menu__link-text">Klanten</span>
+											</a>
+										</li>
+
 										<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel m-menu__item--more m-menu__item--icon-only" m-menu-submenu-toggle="click" m-menu-link-redirect="1" aria-haspopup="true">
 											<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
 												<span class="m-menu__item-here"></span>
