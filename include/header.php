@@ -40,8 +40,11 @@
 		<!--RTL version:<link href="assets/demo/demo2/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 		<link href="assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
+
+		<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="assets/demo/demo2/media/img/logo/favicon.ico" />
+		<link rel="icon" type="image/png" href="assets/images/logo-timaflu.png" />
 		<script>
 			(function(i, s, o, g, r, a, m) {
 				i['GoogleAnalyticsObject'] = r;

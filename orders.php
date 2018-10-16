@@ -171,3 +171,16 @@
     <?php
   }
 ?>
+
+
+<strong>Proces:</strong><br/>
+<ul>
+  <li>Verkoper – order vastleggen</li>
+  <ul>
+    <li>De klant moet gekozen worden uit een lijstje. Het lijstje moet sorteerbaar zijn en je moet kunnen zoeken.</li>
+    <li>Als de klant gekozen is, kunnen bepaalde gegevens op het scherm al ingevuld worden.</li>
+    <li>Per orderregel moet een medicijn gekozen worden.</li>
+    <li>Als aantal van het medicijn is ingevuld, dan kan de totaalprijs voor die ene regel worden berekend en de totaalprijs van de order wordt bijgewerkt (exclusief én inclusief de korting)</li>
+    <li>Als alles is ingevuld, wordt de order bewaard (Let op: jullie hoeven het SQL INSERT statement niet mee te nemen) </li>
+  </ul>
+</ul>
