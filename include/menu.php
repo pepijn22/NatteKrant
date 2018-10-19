@@ -47,7 +47,7 @@
 												<li class="m-menu__item  m-menu__item" aria-haspopup="true">
 													<a href="?page=orders" class="m-menu__link">
 														<span class="m-menu__item-here"></span>
-														<span class="m-menu__link-text">Orders</span>
+														<span class="m-menu__link-text">Orders vastleggen</span>
 													</a>
 												</li>
 												<li class="m-menu__item  m-menu__item" aria-haspopup="true">

@@ -171,16 +171,145 @@
     <?php
   }
 ?>
+<div class="m-grid__item m-grid__item--fluid m-wrapper">
+<div class="m-content">
+            <div class="row">
+              <div class="col-md-12">
+
+                <!--begin::Portlet-->
+                <div class="m-portlet m-portlet--tab">
+                  <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                      <div class="m-portlet__head-title">
+                        <span class="m-portlet__head-icon m--hide">
+                          <i class="la la-gear"></i>
+                        </span>
+                        <h3 class="m-portlet__head-text">
+                          Order vastleggen
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--begin::Form-->
+                  <form class="m-form m-form--fit m-form--label-align-right">
+                    <div class="m-portlet__body">
+                      
+                      
+                      <div class="form-group m-form__group">
+                        <label for="exampleSelect1">Klanten</label>
+                        <select class="form-control m-input" id="exampleSelect1">
+                          <?php
+                    $sql = 'SELECT * FROM klant';
+                    foreach ($conn->query($sql) as $row) {
+                      ?>
+                       <option><?=$row['naam']?></option>
+                       <?php
+                    }
+                          ?>
+                        </select>
+
+                      </div>
+  
+                      <div class="m-portlet__body">
+                          <!--begin: Datatable -->
+                          <div id="m_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                            
+
+                          <div class="row">
+                            <div class="col-sm-12">
+                               <label for="exampleSelect1">Producten</label>
+                              <table class="table table-striped- table-bordered table-hover table-checkable dataTable no-footer dtr-inline" id="m_table_1" role="grid" aria-describedby="m_table_1_info" style="width: 1028px;">
+                                  <thead>
+                                          <tr role="row">
+                                            <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Naam: activate to sort naam ascending">Naam</th>
+                                            <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="">Inkoopprijs</th>
+                                            <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Agent: activate to sort column ascending">Verkoopprijs</th>
+                                            <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">Aantal</th>
+                                           
+                                          </tr>
+                                  </thead>
+                                      <tbody>
+                                      <?php
+
+                                          $sql = 'SELECT
+                                      p.naam,
+                                      inkoopprijs,
+                                      verkoopprijs,
+                                      SUM(verkoopprijs - inkoopprijs) AS verschil
+                                      FROM
+                                     Product p
+                                      JOIN
+                                      Inkoop i
+                                      ON i.Product_product_id = p.product_id
+                                      GROUP BY inkoopprijs
+                                      ORDER BY verschil DESC';
+                                      $counter = 0;
+                                          foreach ($conn->query($sql) as $row) {
+                                            $counter++;
+
+                                              ?>
+                                              <tr role="row" class="odd">
+                                                <td class="" tabindex="0">
+                                                          <div class="m-card-user m-card-user--sm">
+                                                              <div class="m-card-user__pic"><label class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand">
+                            <input type="checkbox" value="" class="m-checkable">
+                            <span></span>
+                        </label>
+                                                              </div>
+                                                              <div class="m-card-user__details">
+                                                                  <span class="m-card-user__name"><?=$row['naam']?></span>
+                                                              </div>
+                                                          </div>
+                                                  </td>
+                                                          <td class=""><?=$row['inkoopprijs']?></td>
+                                                          <td class=""><?=$row['verkoopprijs']?></td>
+                                                          <td class="" width="150px"> <div class="form-group m-form__group">
+                
+                        <input type="email" class="form-control m-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" width="50">
+                      </div></td>
+
+                                                          
+                                                  </tr>
+                                              <?php
+                                          }
 
 
-<strong>Proces:</strong><br/>
-<ul>
-  <li>Verkoper – order vastleggen</li>
-  <ul>
-    <li>De klant moet gekozen worden uit een lijstje. Het lijstje moet sorteerbaar zijn en je moet kunnen zoeken.</li>
-    <li>Als de klant gekozen is, kunnen bepaalde gegevens op het scherm al ingevuld worden.</li>
-    <li>Per orderregel moet een medicijn gekozen worden.</li>
-    <li>Als aantal van het medicijn is ingevuld, dan kan de totaalprijs voor die ene regel worden berekend en de totaalprijs van de order wordt bijgewerkt (exclusief én inclusief de korting)</li>
-    <li>Als alles is ingevuld, wordt de order bewaard (Let op: jullie hoeven het SQL INSERT statement niet mee te nemen) </li>
-  </ul>
-</ul>
+                                      ?>
+
+
+                                        </tbody>
+
+                                </table>
+
+
+                              </div></div>
+
+
+                          </div>
+
+
+
+                        </div>
+
+
+                     
+                    </div>
+                    <div class="m-portlet__foot m-portlet__foot--fit">
+                      <div class="m-form__actions">
+                        <button type="reset" class="btn btn-primary">Bewaar order</button>
+                      </div>
+                    </div>
+                  </form>
+
+                  <!--end::Form-->
+                </div>
+
+                <!--end::Portlet-->
+
+                <!--end::Portlet-->
+              </div>
+            </div>
+          </div>
+
+</div>
