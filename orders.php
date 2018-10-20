@@ -174,6 +174,7 @@
                       }
                             ?>
                           </select>
+<<<<<<< HEAD
 
                         </div>
     
@@ -265,6 +266,121 @@
                                 </div></div>
 
 
+=======
+
+                        </div>
+    
+                        <div class="m-portlet__body">
+                            <!--begin: Datatable -->
+                            <div id="m_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                              
+
+                            <div class="row">
+                              <div class="col-sm-12">
+                                 <label for="exampleSelect1">Producten</label>
+                                <table class="table table-striped- table-bordered table-hover table-checkable dataTable no-footer dtr-inline" id="m_table_1" role="grid" aria-describedby="m_table_1_info" style="width: 1028px;">
+                                    <thead>
+                                            <tr role="row">
+                                              <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Naam: activate to sort naam ascending">Naam</th>
+                                              <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="">Inkoopprijs</th>
+                                              <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Agent: activate to sort column ascending">Verkoopprijs</th>
+                                              <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">Aantal</th>
+                                               <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">subtotaal</th>
+                                             
+                                            </tr>
+                                    </thead>
+                                        <tbody>
+                                        <?php
+
+                                            $sql = 'SELECT
+                                        p.naam,
+                                        inkoopprijs,
+                                        verkoopprijs,
+                                        SUM(verkoopprijs - inkoopprijs) AS verschil
+                                        FROM
+                                       Product p
+                                        JOIN
+                                        Inkoop i
+                                        ON i.Product_product_id = p.product_id
+                                        GROUP BY inkoopprijs
+                                        ORDER BY verschil DESC';
+                                        $counter = 0;
+                                            foreach ($conn->query($sql) as $row) {
+                                              $counter++;
+
+                                                ?>
+                                                <tr role="row" class="odd">
+                                                  <td class="" tabindex="0">
+                                                            <div class="m-card-user m-card-user--sm">
+                                                                <div class="m-card-user__pic"><label class="m-checkbox m-checkbox--single m-checkbox--solid m-checkbox--brand">
+                              <input type="checkbox" value="" class="m-checkable">
+                              <span></span>
+                          </label>
+                                                                </div>
+                                                                <div class="m-card-user__details">
+                                                                    <span class="m-card-user__name"><?=$row['naam']?></span>
+                                                                </div>
+                                                            </div>
+                                                    </td>
+                                                            <td class="">€ <?=$row['inkoopprijs']?></td>
+                                                            <td class="">€ <?=$row['verkoopprijs']?></td>
+                                                            <td class="" width="150px"> <div class="form-group m-form__group">
+                  
+                          <input type="email" class="form-control m-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" width="50">
+                        </div></td>
+                        <td class="">-</td> 
+
+                                                            
+                                                    </tr>
+                                                <?php
+                                            }
+
+
+                                        ?>
+                                        <tr role="row" class="odd">
+                                                  <th class="" tabindex="0">
+                                                         Order korting
+                                                    </th>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td> 
+
+                                                            
+                                                    </tr>
+                                              <tr role="row" class="odd">
+                                                  <th class="" tabindex="0">
+                                                         Jaaromzet korting
+                                                    </th>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td> 
+
+                                                            
+                                                </tr>
+                                                    <tr role="row" class="odd">
+                                                  <th class="" tabindex="0">
+                                                          Totaal
+                                                    </th>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td> 
+
+                                                            
+                                                    </tr>
+
+
+                                          </tebody>
+
+                                  </table>
+
+
+                                </div></div>
+
+
+>>>>>>> 699123f3b7c05587ab08155e32ce6c484c729dd5
                             </div>
 
 
