@@ -11,26 +11,19 @@
 					<tr role="row">
 	                  	<th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Factuur id: activate to sort Factuur id ascending">Factuur id</th>
 	                  	<th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Factuur id: activate to sort Factuur id ascending">Order id</th>
+	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Agent: activate to sort column ascending">Order status</th>
 	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="">Datum factuur</th>
-	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Agent: activate to sort column ascending">Status</th>
+	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="">Factuur status</th>
 	                </tr>
 				</thead>
 				<tbody>
 	                <?php
-	                    $sql = "SELECT ko.order_id,
-							f.factuur_id AS factuurnummer,
-							f.datum AS factuurdatum,
-							f.status AS factuurstatus
-						FROM
-							factuur AS f
-								LEFT JOIN
-							factuurstatus AS fs ON f.factuur_id = fs.factuur_id
-								LEFT JOIN
-							klantorder AS ko ON ko.order_id = fs.order_id
-								LEFT JOIN
-							klant AS k ON k.klant_id = ko.Klant_klant_id
-						WHERE
-							f.status = 'facturabel'";
+	                    $sql = "SELECT ko.order_id, f.factuur_id AS factuurnummer, f.datum AS factuurdatum, ko.status AS orderstatus, fs.status AS factuurstatus
+FROM factuur AS f
+	LEFT JOIN factuurstatus AS fs ON f.factuur_id = fs.factuur_id
+	LEFT JOIN klantorder AS ko ON ko.order_id = fs.order_id
+	LEFT JOIN klant AS k ON k.klant_id = ko.Klant_klant_id
+	WHERE f.status = 'facturabel'";
 	                    foreach ($conn->query($sql) as $row) {
 	                        ?>
 	                        <tr role="row" class="odd">
@@ -42,6 +35,7 @@
 	                                </div>
 	                            </td>
 	                            <td class=""><?=$row['order_id']?></td>
+								<td class=""><?=$row['orderstatus']?></td>
 								<td class=""><?=$row['factuurdatum']?></td>
 								<td class=""><?=$row['factuurstatus']?></td>
 	        				  	</tr>
@@ -59,9 +53,10 @@
 					<tr role="row">
 	                  	<th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Factuur id: activate to sort Factuur id ascending">Factuur id</th>
 	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="">Klant</th>
+	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="">Order status</th>
 	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Agent: activate to sort column ascending">Telefoon</th>
-	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">Datum</th>
-	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">Status</th>
+	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">Datum verstuurd</th>
+	                    <th class="sorting" tabindex="0" aria-controls="m_table_1" rowspan="1" colspan="1" aria-label="Company Name: activate to sort column ascending">Factuur tatus</th>
 	                </tr>
 				</thead>
 				<tbody>
@@ -70,7 +65,8 @@
 							    k.telefoonnummer AS telefoonnummer,
 							    f.factuur_id AS factuurnummer,
 							    f.datum AS factuurdatum,
-							    f.status AS factuurstatus
+							    fs.status AS factuurstatus,
+                                ko.status AS orderstatus
 							FROM
 							    factuur AS f
 							        LEFT JOIN
@@ -81,7 +77,7 @@
 							    klant AS k ON k.klant_id = ko.Klant_klant_id
 							WHERE
 							    fs.status = 'Verstuurd'
-							        AND DATEDIFF(NOW(), f.datum) > 7
+							        AND DATEDIFF(NOW(), f.datum) > 14
 							";
 	                    foreach ($conn->query($sql) as $row) {
 	                        ?>
@@ -94,6 +90,7 @@
 	                                </div>
 	                            </td>
 								<td class=""><?=$row['klantnaam']?></td>
+								<td class=""><?=$row['orderstatus']?></td>
 								<td class=""><?=$row['telefoonnummer']?></td>
 								<td class=""><?=$row['factuurdatum']?></td>
 								<td class=""><?=$row['factuurstatus']?></td>
