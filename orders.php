@@ -282,18 +282,40 @@
                                         ?>
                                         <tr role="row" class="odd">
                                                   <th class="" tabindex="0">
-                                                          Korting
+                                                         Order korting
                                                     </th>
                                                             <td class=""></td>
                                                             <td class=""></td>
                                                             <td class=""></td>
-                                                            <td class="">-</td> 
+                                                            <td class=""></td> 
+
+                                                            
+                                                    </tr>
+                                              <tr role="row" class="odd">
+                                                  <th class="" tabindex="0">
+                                                         Jaaromzet korting
+                                                    </th>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td> 
+
+                                                            
+                                                </tr>
+                                                    <tr role="row" class="odd">
+                                                  <th class="" tabindex="0">
+                                                          Totaal
+                                                    </th>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td>
+                                                            <td class=""></td> 
 
                                                             
                                                     </tr>
 
 
-                                          </tbody>
+                                          </tebody>
 
                                   </table>
 
