@@ -3,10 +3,6 @@
 <div class="m-portlet__body">
 		<!--begin: Datatable -->
 		<div id="m_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-<<<<<<< HEAD
-     
-=======
->>>>>>> a183703c931f4b0ea04f0180fddf7f5fe612da44
 
     <div class="row">
       <div class="col-sm-12">
@@ -76,16 +72,9 @@
 
                   </tbody>
 
-<<<<<<< HEAD
 					</table></div></div></div>
 	</div>
 
 
-
-
-<strong>Proces:</strong><br/>
-magazijn: Pak orders in die verstuurd moeten worden (en waarvoor de robots de medicijnen via 1 of meer bakken aan het verzamelen zijn). 
-=======
-					</table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="m_table_1_info" role="status" aria-live="polite"></div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="m_table_1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="m_table_1_previous"><a href="#" aria-controls="m_table_1" data-dt-idx="0" tabindex="0" class="page-link"><i class="la la-angle-left"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="m_table_1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="m_table_1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="m_table_1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="m_table_1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="m_table_1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item next" id="m_table_1_next"><a href="#" aria-controls="m_table_1" data-dt-idx="6" tabindex="0" class="page-link"><i class="la la-angle-right"></i></a></li></ul></div></div></div></div>
+					</table></div></div></div>
 	</div>
->>>>>>> a183703c931f4b0ea04f0180fddf7f5fe612da44
