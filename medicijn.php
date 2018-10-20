@@ -16,7 +16,7 @@ foreach ($conn->query($sql) as $row) {
     <strong>Voorraad: </strong> <?= $row['voorraad'] ?> <br>
     <strong>Minimum voorraad: </strong> <?= $row['min_voorraad'] ?> <br><br>
 
-    <strong>Moet bijbesteld worden: </strong> <?= ($row['voorraad'] < $row['min_voorraad']) ? 'Ja' : 'Nee' ?> <br><br><br>
+    <strong>Moet bijbesteld worden: </strong> <?= ($row['voorraad'] < $row['min_voorraad']) ? 'Nee' : 'Ja' ?> <br><br><br>
 
 
     <strong>Leveranciers:</strong>
