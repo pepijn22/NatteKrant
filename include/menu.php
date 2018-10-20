@@ -74,6 +74,12 @@
 														<span class="m-menu__link-text">Magazijn</span>
 													</a>
 												</li>
+												<li class="m-menu__item  m-menu__item" aria-haspopup="true">
+													<a href="?page=inkoop" class="m-menu__link">
+														<span class="m-menu__item-here"></span>
+														<span class="m-menu__link-text">Inkoop</span>
+													</a>
+												</li>
 											</ul>
 										</div>
 									</div>

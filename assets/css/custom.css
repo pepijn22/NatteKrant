@@ -5,3 +5,15 @@
 	    height: 0px;
 	}
 }
+
+
+.not-in-stock {
+	color: red !important;
+
+	background-color: #ffcccc !important;
+
+
+}
+.not-in-stock:hover {
+	background-color: #ffcccc !important;
+}
