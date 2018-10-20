@@ -132,15 +132,8 @@ LIMIT 5';
 
 
                   </tbody>
-
 					</table>
-
-
-				</div></div>
-
-
+				</div>
+            </div>
 		</div>
-
-
-
 	</div>
